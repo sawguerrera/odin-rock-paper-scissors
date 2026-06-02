@@ -22,3 +22,11 @@ getHumanChoice
 - Add the prompt within the function
 
 - Create if/else statements within the function depending on the user's answer
+
+Declaring players score variables
+
+- Assign humanScore variable to zero
+
+- Assign computerScore variable to zero
+
+- Search how to make userInput string case insensitive - Answer: localeCompare() function
