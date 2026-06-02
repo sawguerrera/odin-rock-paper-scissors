@@ -29,4 +29,6 @@ Declaring players score variables
 
 - Assign computerScore variable to zero
 
-- Search how to make userInput string case insensitive - Answer: localeCompare() function
+- Search how to make userInput string case insensitive - Answer: localeCompare() function - Add this at the end after you've ensured the game is functioning correctly
+
+
