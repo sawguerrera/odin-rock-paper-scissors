@@ -16,4 +16,20 @@ function getComputerChoice(randomNumber) {
 
 console.log(getComputerChoice(randomNumber));
 
+let userInput = window.prompt("Enter Rock, Paper or Scissors:", "");
+
+function getHumanChoice(userInput) {
+    if (userInput === "Rock") {
+        return "Rock";
+    } else if (userInput === "Paper") {
+        return "Paper"
+    } else if (userInput === "Scissors") {
+        return "Scissors"
+    } else {
+        userInput;
+    }
+}
+
+
+
 
