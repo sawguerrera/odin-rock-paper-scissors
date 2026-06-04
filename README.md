@@ -38,3 +38,5 @@ Writing the logic to play the entire match of 5 rounds
 - Ask the function to repeat the getHumanChoice and playRound function
 
 
+
+

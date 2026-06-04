@@ -67,46 +67,22 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+console.log(playRound(humanChoice, computerChoice));
 console.log(humanScore);
 console.log(computerScore);
 
 // Playing 5 rounds, declaring the overall winner of the match.
 
-
-function playGame(playMatch) {
+function playGame() {
+    playRound();
     
-    let humanScore = 0;
-
-    let computerScore = 0;
-
-    let humanChoice = getHumanChoice(userInput);
-
-    let computerChoice = getComputerChoice(randomNumber);
-
-        function playMatch(humanChoice, computerChoice) {
-            if (humanChoice == computerChoice) {
-                console.log("We have a draw!");
-        }   else if (humanChoice == "Rock" && computerChoice === "Paper") {
-                console.log("You lose! Paper beats Rock!");
-                computerScore++;
-        }   else if (humanChoice === "Paper" && computerChoice === "Scissors") {
-                console.log("You lose! Scissors beats Paper!" );
-                computerScore++;
-        }   else if (humanChoice === "Scissors" && computerChoice === "Rock") {
-                console.log("You lose! Rock beats Scissors");
-                computerScore++;
-        }   else if (humanChoice === "Paper" && computerChoice === "Rock") {
-                console.log("You win! Paper beats Rock.");
-                humanScore++;
-        }   else if (humanChoice === "Scissors" && computerChoice === "Paper") {
-                console.log("You win! Scissors beats Paper.");
-                humanScore++;
-        }   else if (humanChoice === "Rock" && computerChoice === "Scissors") {
-                console.log("You win! Rock beats Scissors");
-                humanScore++;
-        }   
-    }
+    playRound();
+    playRound();
+    playRound();
+    playRound();
 }
+
+// playGame();
 
 // console.log(humanScore);
 // console.log(computerScore);
