@@ -12,7 +12,7 @@ function getComputerChoice(randomNumber) {
     }
 }
 
-console.log(getComputerChoice(randomNumber));
+getComputerChoice(randomNumber);
 
 // Asking human to select Rock, Paper, Scissors
 
@@ -30,7 +30,7 @@ function getHumanChoice(userInput) {
     }
 }
 
-console.log(getHumanChoice(userInput));
+getHumanChoice(userInput);
 
 // Playing a single round, declaring a winner of that 
 // round and printing the score
@@ -67,13 +67,49 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-// Round 1
-
-console.log(playRound(humanChoice, computerChoice));
 console.log(humanScore);
 console.log(computerScore);
 
-
-
 // Playing 5 rounds, declaring the overall winner of the match.
 
+
+function playGame(playMatch) {
+    
+    let humanScore = 0;
+
+    let computerScore = 0;
+
+    let humanChoice = getHumanChoice(userInput);
+
+    let computerChoice = getComputerChoice(randomNumber);
+
+        function playMatch(humanChoice, computerChoice) {
+            if (humanChoice == computerChoice) {
+                console.log("We have a draw!");
+        }   else if (humanChoice == "Rock" && computerChoice === "Paper") {
+                console.log("You lose! Paper beats Rock!");
+                computerScore++;
+        }   else if (humanChoice === "Paper" && computerChoice === "Scissors") {
+                console.log("You lose! Scissors beats Paper!" );
+                computerScore++;
+        }   else if (humanChoice === "Scissors" && computerChoice === "Rock") {
+                console.log("You lose! Rock beats Scissors");
+                computerScore++;
+        }   else if (humanChoice === "Paper" && computerChoice === "Rock") {
+                console.log("You win! Paper beats Rock.");
+                humanScore++;
+        }   else if (humanChoice === "Scissors" && computerChoice === "Paper") {
+                console.log("You win! Scissors beats Paper.");
+                humanScore++;
+        }   else if (humanChoice === "Rock" && computerChoice === "Scissors") {
+                console.log("You win! Rock beats Scissors");
+                humanScore++;
+        }   
+    }
+}
+
+// console.log(humanScore);
+// console.log(computerScore);
+// playGame(playMatch * 4);
+
+// console.log(`The final match score is` + `Human:` + `${humanScore}` + `Computer:` + `${computerScore}` )
