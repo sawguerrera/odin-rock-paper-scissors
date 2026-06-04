@@ -43,28 +43,13 @@ let humanChoice = getHumanChoice(userInput);
 
 let computerChoice = getComputerChoice(randomNumber);
 
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice == computerChoice) {
-        console.log("We have a draw!");
-    } else if (humanChoice == "rock" && computerChoice === "paper") {
-        console.log("You lose! Paper beats Rock!");
-        computerScore++;
-    }  else if (humanChoice === "paper" && computerChoice === "scissors") {
-        console.log("You lose! Scissors beats Paper!" );
-        computerScore++;
-    } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        console.log("You lose! Rock beats Scissors");
-        computerScore++;
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log("You win! Paper beats Rock.");
-        humanScore++;
-    } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        console.log("You win! Scissors beats Paper.");
-        humanScore++;
-    } else if (humanChoice === "rock" && computerChoice === "scissors") {
-        console.log("You win! Rock beats Scissors");
-        humanScore++;
-    }
+function getWinner() {
+    getComputerChoice()
+    getHumanChoice()
+}
+
+function playRound() {
+    
 }
 
 // Playing 5 rounds, declaring the overall winner of the match.
