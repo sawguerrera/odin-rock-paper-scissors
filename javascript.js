@@ -1,5 +1,6 @@
-let randomNumber = Math.floor(Math.random() * 10) + 1;
+// Getting Computer to choose Rock, Paper, Scissors
 
+let randomNumber = Math.floor(Math.random() * 10) + 1;
 
 function getComputerChoice(randomNumber) {
     if (randomNumber <= 3) {
@@ -12,6 +13,8 @@ function getComputerChoice(randomNumber) {
 }
 
 console.log(getComputerChoice(randomNumber));
+
+// Asking human to select Rock, Paper, Scissors
 
 let userInput = window.prompt("Enter Rock, Paper or Scissors:", "");
 
@@ -28,6 +31,9 @@ function getHumanChoice(userInput) {
 }
 
 console.log(getHumanChoice(userInput));
+
+// Playing a single round, declaring a winner of that 
+// round and printing the score
 
 let humanScore = 0;
 
@@ -61,6 +67,13 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+// Round 1
+
 console.log(playRound(humanChoice, computerChoice));
 console.log(humanScore);
 console.log(computerScore);
+
+
+
+// Playing 5 rounds, declaring the overall winner of the match.
+

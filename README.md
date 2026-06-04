@@ -31,4 +31,10 @@ Declaring players score variables
 
 - Search how to make userInput string case insensitive - Answer: localeCompare() function - Add this at the end after you've ensured the game is functioning correctly
 
+Writing the logic to play the entire match of 5 rounds
+
+- Create a function which calls the Round and it's variables
+
+- Ask the function to repeat the getHumanChoice and playRound function
+
 
