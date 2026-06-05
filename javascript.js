@@ -12,7 +12,7 @@ function getComputerChoice(randomNumber) {
     }
 }
 
-console.log(getComputerChoice(randomNumber));
+getComputerChoice(randomNumber);
 
 // Asking human to select Rock, Paper, Scissors
 
@@ -28,65 +28,73 @@ function getHumanChoice(userInput) {
     }
 }
 
-console.log(getHumanChoice(userInput));
+getHumanChoice(userInput);
 
-// Playing a single round - Part 1 declaring a winner of that round 
+// Playing a single round 
 
 let humanScore = 0;
 
 let computerScore = 0;
 
-let humanChoice = getHumanChoice(userInput);
+let humanChoice = getHumanChoice();
 
-let computerChoice = getComputerChoice(randomNumber);
-
-function getsWinner(humanChoice, computerChoice) {
-    if (humanChoice == computerChoice) {
-        console.log("We have a draw!");
-    } else if (humanChoice == "rock" && computerChoice === "paper") {
-        console.log("You lose! Paper beats Rock!");
-    }  else if (humanChoice === "paper" && computerChoice === "scissors") {
-        console.log("You lose! Scissors beats Paper!" );
-    } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        console.log("You lose! Rock beats Scissors");
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log("You win! Paper beats Rock.");
-    } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        console.log("You win! Scissors beats Paper.");
-    } else if (humanChoice === "rock" && computerChoice === "scissors") {
-        console.log("You win! Rock beats Scissors");
-    }
-}
-
+let computerChoice = getComputerChoice();
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice == "rock" && computerChoice === "paper")  {
         computerScore++
-        return computerScore;
+        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
         computerScore++
-        return computerScore;
+        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
         computerScore++
-        return computerScore;
+        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
     } else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore++
-        return humanScore;
+        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
         humanScore++
-        return humanScore;
+        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
         humanScore++
-        return humanScore;
+        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
     }
 }
 
 
-// console.log(getsWinner(humanChoice, computerChoice));
+// playRound(humanChoice, computerChoice);
+
+// getHumanChoice();
+// getComputerChoice();
+// playRound(humanChoice, computerChoice);
 
 
+function playGame() {
+    // Round 1
+    getHumanChoice(userInput);
+    getComputerChoice(randomNumber)
+    playRound(getHumanChoice, getComputerChoice);
+    // Round 2
+    getHumanChoice(userInput);
+    getComputerChoice(randomNumber)
+    console.log(playRound(humanChoice, computerChoice));
+    // Round 3
+    getHumanChoice(userInput);
+    getComputerChoice(randomNumber)
+    let humanChoice = getHumanChoice(userInput);
+    let computerChoice = getComputerChoice(randomNumber);
+    console.log(playRound(humanChoice, computerChoice));
+    // Round 4
+    getHumanChoice(userInput);
+    getComputerChoice(randomNumber)
+    let humanChoice = getHumanChoice(userInput);
+    let computerChoice = getComputerChoice(randomNumber);
+    console.log(playRound(humanChoice, computerChoice));
+}
 
 
+playGame();
 
 
 // getWinner(humanSelection, computerSelection);
