@@ -38,30 +38,63 @@ let computerScore = 0;
 
 let humanChoice = getHumanChoice();
 
-let computerChoice = getComputerChoice();
+// let computerChoice = getComputerChoice();
 
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "rock" && computerChoice === "paper")  {
-        computerScore++
-        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
-    } else if (humanChoice === "paper" && computerChoice === "scissors") {
-        computerScore++
-        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
-    } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        computerScore++
-        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
-    } else if (humanChoice === "paper" && computerChoice === "rock") {
-        humanScore++
-        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
-    } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        humanScore++
-        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
-    } else if (humanChoice === "rock" && computerChoice === "scissors") {
-        humanScore++
-        console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
+// function playRound(humanChoice, computerChoice) {
+//     if (humanChoice == "rock" && computerChoice === "paper")  {
+//         computerScore++
+//         console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
+//     } else if (humanChoice === "paper" && computerChoice === "scissors") {
+//         computerScore++
+//         console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
+//     } else if (humanChoice === "scissors" && computerChoice === "rock") {
+//         computerScore++
+//         console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
+//     } else if (humanChoice === "paper" && computerChoice === "rock") {
+//         humanScore++
+//         console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
+//     } else if (humanChoice === "scissors" && computerChoice === "paper") {
+//         humanScore++
+//         console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
+//     } else if (humanChoice === "rock" && computerChoice === "scissors") {
+//         humanScore++
+//         console.log(`User Score: ` + `${humanScore} ` + ` ` + `Computer Score: ` + `${computerScore}`);
+//     }
+// }
+
+function playRound() {
+    getHumanChoice();
+    getComputerChoice();
+    if (getHumanChoice(userInput) == "rock" &&  getComputerChoice(randomNumber) == "paper") {
+    computerScore++;
+    return computerScore;
+    } else if (getHumanChoice(userInput) == "paper" &&  getComputerChoice(randomNumber) == "scissors") {
+    computerScore++;
+    return computerScore    
+    } else if (getHumanChoice(userInput) == "scissors" &&  getComputerChoice(randomNumber) == "rock") {
+    computerScore++;
+    return computerScore
+    } else if (getHumanChoice(userInput) == "paper" &&  getComputerChoice(randomNumber) == "rock") {
+    humanScore++;
+    return humanScore;
+    } else if (getHumanChoice(userInput) == "scissors" &&  getComputerChoice(randomNumber) == "paper") {
+    humanScore++;
+    return humanScore;
+    } else if (getHumanChoice(userInput) == "rock" &&  getComputerChoice(randomNumber) == "scissors") {
+    humanScore++;
+    return humanScore;
     }
 }
 
+playRound();
+
+
+// function getValue() {
+//     return 10;
+// }
+
+// let myResult = getValue();
+// myResul++;
 
 // playRound(humanChoice, computerChoice);
 
@@ -70,31 +103,19 @@ function playRound(humanChoice, computerChoice) {
 // playRound(humanChoice, computerChoice);
 
 
-function playGame() {
-    // Round 1
-    getHumanChoice(userInput);
-    getComputerChoice(randomNumber)
-    playRound(getHumanChoice, getComputerChoice);
-    // Round 2
-    getHumanChoice(userInput);
-    getComputerChoice(randomNumber)
-    console.log(playRound(humanChoice, computerChoice));
-    // Round 3
-    getHumanChoice(userInput);
-    getComputerChoice(randomNumber)
-    let humanChoice = getHumanChoice(userInput);
-    let computerChoice = getComputerChoice(randomNumber);
-    console.log(playRound(humanChoice, computerChoice));
-    // Round 4
-    getHumanChoice(userInput);
-    getComputerChoice(randomNumber)
-    let humanChoice = getHumanChoice(userInput);
-    let computerChoice = getComputerChoice(randomNumber);
-    console.log(playRound(humanChoice, computerChoice));
-}
+// function playGame() {
+//     // Round 1
+//     playRound();
+//     // Round 2
+//     playRound();
+//     // Round 3
+//     playRound();
+//     // Round 4
+//     playRound();
+// }
 
 
-playGame();
+// playGame();
 
 
 // getWinner(humanSelection, computerSelection);
