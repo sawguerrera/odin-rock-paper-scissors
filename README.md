@@ -40,7 +40,9 @@ Writing the logic to play the entire match of 5 rounds
 
 Remarks on Project upon completion - Saturday June 6th 2026:
 
-- Everything was going according to plan until Stage 6. I struggled to grasp the possibility of not requiring any parameters in my earlier functions. And as a Result i found it very difficult to complete a entire match where each round result would be different.
+- Everything was going according to plan until Stage 6. I struggled to grasp the possibility of not requiring any parameters in my earlier functions IF the variable was inside the function block. 
+
+As a Result I found it very difficult to complete a entire match where each round result would be different.
 
 - I drifted away from using for loops as I hadn't learnt how to use them - but each time I found myself overcomplicating the project by using new variables for a variable that had already assigned results of the first iteration. Meaning I would still get 5 round results using the initial round result as a source.
 
@@ -50,10 +52,12 @@ Remarks on Project upon completion - Saturday June 6th 2026:
 
 2 - Taking a step back to read the task hints and understanding that I could call a new variable to the same functions and it would've given me a different result. Again, understanding that I could call these variables within the function block to execute more accurately instead of declaring them in the global scope (or using the humanChoice and computerChoice variables in Step 5) where I would've got the same results for a single result would've made life very difficult for me.
 
-3 - Once I tested the playGame() for loop, and made some tweaks to the playRound() function for a draw - the final step was to declare a winner - which was straightforward to do by using the number types of humanScore and computerScore in an if/else statement to share the final match winner.
+3 - Once I tested the playGame() for loop, and made some tweaks to the playRound() function for a draw - the final step was to declare a winner - which was straightforward to do by using the number types of humanScore and computerScore in an if/else statement within the playGame() function to declare a match winner.
 
 
-Overall I learnt a lot of things about this project and I'm glad I was able to find out where I was going wrong. I think in future a little more experimentation and seeing what the console prints out could've saved me a bit more time (especially in the earlier function declarations and not getting wound up by thinking the only way to print a function was to ensure it had a parameter - when they were so many examples where this just wasn't the case).
+Overall I learnt a lot of things about this project and I'm glad I was able to find out where I was going wrong. 
+
+I think in future a little more experimentation and seeing what the console prints out could've saved me a bit more time (especially in the earlier function declarations and not getting wound up by thinking the only way to print a function was to ensure it had a parameter - when they were so many examples where this just wasn't the case).
 
 In future, I will ensure I do the following...
 
@@ -65,7 +69,7 @@ In future, I will ensure I do the following...
 
 - Writing additional psuedocode for any new problems or outcomes that come out of that code, then doing bullet point 2 again 
 
-Signed F.O.
+F.O.
 
 
 
