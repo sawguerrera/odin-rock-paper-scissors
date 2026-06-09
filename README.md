@@ -72,4 +72,9 @@ In future, I will ensure I do the following...
 F.O.
 
 
+Tuesday June 9th: New Notes following Git username change:
+
+
+
+
 
